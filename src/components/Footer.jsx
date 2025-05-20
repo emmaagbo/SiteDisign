@@ -1,12 +1,8 @@
-
 function Footer(){
     return(
-        <nav>
-            <div>
-            {/**Logo */}
-                <a href="/">Emmanuel</a>
-            </div>
-        </nav>
+        <footer className="text-center text-gray-400 mt-12">
+          © 2025 Emmanuel - Portfolio
+        </footer>
     )
 }
 

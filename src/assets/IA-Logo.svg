@@ -1,0 +1,56 @@
+<svg viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg">
+  <!-- Fond avec dégradé -->
+  <defs>
+    <linearGradient id="bg-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0B0B3B" />
+      <stop offset="100%" stop-color="#1E0B3B" />
+    </linearGradient>
+    
+    <linearGradient id="glow-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#4D6CFA" />
+      <stop offset="100%" stop-color="#9D4EDD" />
+    </linearGradient>
+    
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="8" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+  </defs>
+  
+  <!-- Cercle de fond -->
+  <circle cx="200" cy="200" r="170" fill="url(#bg-gradient)" />
+  
+  <!-- Anneaux orbitaux -->
+  <ellipse cx="200" cy="200" rx="150" ry="70" fill="none" stroke="rgba(77, 108, 250, 0.3)" stroke-width="2" transform="rotate(30, 200, 200)" />
+  <ellipse cx="200" cy="200" rx="130" ry="60" fill="none" stroke="rgba(157, 78, 221, 0.3)" stroke-width="2" transform="rotate(60, 200, 200)" />
+  
+  <!-- Cerveau/circuit stylisé -->
+  <path d="M150,170 C160,150 180,140 200,140 C220,140 240,150 250,170 C260,190 260,220 250,240 C240,260 220,270 200,270 C180,270 160,260 150,240 C140,220 140,190 150,170 Z" fill="none" stroke="url(#glow-gradient)" stroke-width="4" filter="url(#glow)" />
+  
+  <!-- Connexions du réseau neuronal -->
+  <line x1="160" y1="180" x2="240" y2="180" stroke="#7B2CBF" stroke-width="2" />
+  <line x1="160" y1="200" x2="240" y2="200" stroke="#7B2CBF" stroke-width="2" />
+  <line x1="160" y1="220" x2="240" y2="220" stroke="#7B2CBF" stroke-width="2" />
+  
+  <!-- Points d'intersection -->
+  <circle cx="170" cy="180" r="5" fill="#4CC9F0" />
+  <circle cx="200" cy="180" r="5" fill="#4CC9F0" />
+  <circle cx="230" cy="180" r="5" fill="#4CC9F0" />
+  
+  <circle cx="170" cy="200" r="5" fill="#4CC9F0" />
+  <circle cx="200" cy="200" r="8" fill="#4CC9F0" />
+  <circle cx="230" cy="200" r="5" fill="#4CC9F0" />
+  
+  <circle cx="170" cy="220" r="5" fill="#4CC9F0" />
+  <circle cx="200" cy="220" r="5" fill="#4CC9F0" />
+  <circle cx="230" cy="220" r="5" fill="#4CC9F0" />
+  
+  <!-- Effet d'impulsion -->
+  <circle cx="200" cy="200" r="120" fill="none" stroke="#4361EE" stroke-width="1" opacity="0.5">
+    <animate attributeName="r" values="100;120;100" dur="4s" repeatCount="indefinite" />
+    <animate attributeName="opacity" values="0.1;0.5;0.1" dur="4s" repeatCount="indefinite" />
+  </circle>
+  
+  <!-- Texte "IA" -->
+  <text x="200" y="320" font-family="Arial, sans-serif" font-size="40" font-weight="bold" text-anchor="middle" fill="#FFFFFF">IA</text>
+</svg>
